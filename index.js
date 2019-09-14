@@ -2,7 +2,7 @@ const { ApolloServer } = require("apollo-server");
 
 const mongoose = require("mongoose");
 
-const Post = require("./models/Post");
+const { MONGODB } = require("./config");
 
 const typeDefs = require("./graphql/typeDefs");
 const resolvers = require("./graphql/resolvers");
@@ -13,7 +13,7 @@ const server = new ApolloServer({
 });
 
 mongoose
-  .connect("mongodb://test:A12345678@ds119820.mlab.com:19820/merng", {
+  .connect(MONGODB, {
     useNewUrlParser: true
   })
   .then(() => {
