@@ -21,6 +21,7 @@ const Login = props => {
         data: { login: userData }
       }
     ) {
+      console.log(userData);
       context.login(userData);
       props.history.push("/");
     },
