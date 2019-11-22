@@ -5,6 +5,7 @@ const { AuthenticationError, UserInputError } = require("apollo-server");
 module.exports = {
   Query: {
     async getPosts() {
+      console.log("getPosts");
       try {
         const posts = await Post.find().sort({ createdAt: -1 });
         return posts;
@@ -13,6 +14,7 @@ module.exports = {
       }
     },
     async getPost(_, { postId }) {
+      console.log("getPost");
       try {
         const post = await Post.findById(postId);
 
@@ -28,6 +30,7 @@ module.exports = {
   },
   Mutation: {
     async createPost(_, { body }, context) {
+      console.log("createPost");
       const user = checkAuth(context);
 
       if (body.trim() === "") {
