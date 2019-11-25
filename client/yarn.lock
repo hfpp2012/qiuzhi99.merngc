@@ -1797,7 +1797,7 @@ apollo-link-context@^1.0.19:
     apollo-link "^1.2.13"
     tslib "^1.9.3"
 
-apollo-link-error@^1.0.3:
+apollo-link-error@^1.0.3, apollo-link-error@^1.1.12:
   version "1.1.12"
   resolved "https://registry.npm.taobao.org/apollo-link-error/download/apollo-link-error-1.1.12.tgz#e24487bb3c30af0654047611cda87038afbacbf9"
   integrity sha1-4kSHuzwwrwZUBHYRzahwOK+6y/k=
